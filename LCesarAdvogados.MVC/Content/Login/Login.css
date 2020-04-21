@@ -1,0 +1,59 @@
+﻿body {
+    background: url(../../img/intro-bg.jpg) no-repeat center center fixed !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+    padding: 1px 15px;
+    color: #A0A0A0;
+}
+
+.profile-img {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.Login {
+    background-color: rgba(255, 255, 255, 0.23) !important;
+    border: none !important;
+}
+
+#BtnLogin {
+    background-color: rgba(51, 122, 183, 0.58) !important;
+    border: none !important;
+}
+
+#Login {
+    width: 100%;
+    padding: 5px;
+    line-height: 30px;
+}
+
+#Senha {
+    width: 100%;
+    padding: 5px;
+    line-height: 30px;
+}
+
+.form-horizontal .form-group {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.ErroLogin{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    border-radius:5px;
+}

@@ -1,0 +1,55 @@
+﻿@model LCesarAdvogados.MVC.ViewModel.PostViewModel
+
+@{
+    ViewBag.Title = "LCesar Advogados";
+    Layout = "~/Views/Shared/AreaAdmin.cshtml";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/SummerNote/summernote.js"></script>
+<link href="~/Scripts/SummerNote/summernote.css" rel="stylesheet" />
+<script src="~/Scripts/Post.js"></script>
+
+@using (Html.BeginForm("Create",
+                        "Posts",  
+                        FormMethod.Post,  
+                        new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.TituloPost, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.TituloPost, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TituloPost, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">               
+                <label for="file">Imagem do Resumo:</label>
+                <input type="file" name="file" id="file" />      
+            </div>
+        </div>   
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.LabelFor(model => model.ResumoPost, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.ResumoPost, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ResumoPost, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">               
+                @Html.LabelFor(model => model.ConteudoPost, new { @class = "control-label" })
+                @Html.TextAreaFor(model => model.ConteudoPost)
+                @Html.ValidationMessageFor(model => model.ConteudoPost, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a href="@Url.Action("Index", "Usuarios")" class="btn btn-default">Voltar</a>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<LCesarAdvogados.MVC.ViewModel.PostViewModel>
+
+<style>
+    .Fundo {
+        border-top: 5px solid #000;   
+        margin: 10px;
+        padding-left: 0 !important;
+    }
+</style>
+<a class="buttons prev" href="#">&#60;</a>
+<div class="viewport">
+    <div class="overview" style="width: 2860px; left: -260px;">
+        @foreach (var item in Model)
+        {
+            <div class="Fundo col-sm-6">
+                <div class="row col-sm-12" style="padding-top:5px;">
+                    <img src="~/@item.ImagemPost" style="width:40%;float:left;margin-left:-16px;" class="col-sm-4" />
+                  
+                    <h3>@item.TituloPost</h3>
+                    @item.ResumoPost
+                    <div style="position:absolute; bottom: 0px; width: 100%; height: 55px;margin-left:520px;">
+                        <a href="@Url.Action("GetForId", "VisualizaPost", new { id = item.IdPost })" target="_blank" class="btn btn-primary">Veja Mais</a> 
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<a class="buttons next" href="#">&#62;</a>
+
+

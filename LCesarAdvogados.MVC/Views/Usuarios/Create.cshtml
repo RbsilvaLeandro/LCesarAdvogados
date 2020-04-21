@@ -1,0 +1,53 @@
+﻿@model LCesarAdvogados.MVC.ViewModel.UsuarioViewModel
+
+@{
+    ViewBag.Title = "LCesar Advogados";
+    Layout = "~/Views/Shared/AreaAdmin.cshtml";
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">       
+        @Html.ValidationSummary(true)
+
+       <div class="form-group">            
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12"   >
+                @Html.LabelFor(model => model.Nome, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Nome, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Nome, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">            
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                @Html.LabelFor(model => model.Login, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Login, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Login, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">            
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                @Html.LabelFor(model => model.Senha, new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Senha, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Senha, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a href="@Url.Action("Index", "Usuarios")" class="btn btn-default">Voltar</a>
+            </div>
+        </div>
+    </div>
+}
+
+
