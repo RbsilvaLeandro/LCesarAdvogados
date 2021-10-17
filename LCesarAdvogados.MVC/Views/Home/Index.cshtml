@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="~/Content/skin/default.css" />
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/Contato/Contato.js"></script>
-    <link href="~/Content/Home.css" rel="stylesheet" />
     <link href="~/Content/Loading.css" rel="stylesheet" />
 </head>
-<body onload="initialize()">
-    <header class="intro">
+<body>
+    <header class="intro" id="headerTopo">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
@@ -28,10 +27,12 @@
     <!--O ESCRITORIO SECTION-->
     <section id="section-about">
         <div class="container">
+
             <div class="about">
                 <div class="row title">
                     <div class="col-lg-12">
                         <div class="company mar-left10">
+                            <br />
                             <p>
                                 Fundado em abril de 2010, o escritório visa atender os interesses de nossos clientes,
                                 observando as constantes mutações legais e o aspecto político/social,
@@ -80,14 +81,14 @@
             </div>
         </div>
     </section>
-    <section id="team" class="team-section appear clearfix">
+    <section id="teamMembers">
         <div class="container">
             <div class="row mar-bot10">
                 <div class="col-md-offset-3 col-md-6">
                     <div class="section-header">
                         <div class="wow bounceIn">
-                            <h2 class="section-heading animated" data-animation="bounceInUp">Our Team</h2>
-                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur, adipisci velit, sed quia non numquam.</p>
+                            <h2 class="section-heading animated" data-animation="bounceInUp">Nosso Time</h2>
+                            <p>Profissionais altamente qualificados par aprestar o melhor atendimento ao nosso cliente.</p>
 
                         </div>
                     </div>
@@ -98,7 +99,7 @@
                     <div class="wow bounceIn" data-animation-delay="4.8s">
                         <div class="team-member">
                             <div class="profile-picture">
-                                <figure><img src="img/members3.jpg" alt=""></figure>
+                                <figure><img src="~/img/Team/2.jpg" alt=""></figure>
                                 <div class="profile-overlay"></div>
                                 <div class="profile-social">
                                     <div class="icons-wrapper">
@@ -110,9 +111,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="team-detail">
-                                <h4>Ron Evgeniy</h4>
-                                <span>User experiences</span>
+                            <br />
+                            <div class="
+                                 ">
+                                <h4>Eduardo Morello</h4>
+                                <span>Advogado</span>
                             </div>
 
                         </div>
@@ -122,7 +125,7 @@
                     <div class="wow bounceIn">
                         <div class="team-member">
                             <div class="profile-picture">
-                                <figure><img src="img/members1.jpg" alt=""></figure>
+                                <figure><img src="~/img/Team/1.jpg" alt=""></figure>
                                 <div class="profile-overlay"></div>
                                 <div class="profile-social">
                                     <div class="icons-wrapper">
@@ -134,9 +137,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <br />
                             <div class="team-detail">
-                                <h4>Alexander Chernov</h4>
-                                <span>Web developer</span>
+                                <h4>Cristina Ramos</h4>
+                                <span>Advogada</span>
                             </div>
                         </div>
                     </div>
@@ -145,7 +149,7 @@
                     <div class="wow bounceIn">
                         <div class="team-member">
                             <div class="profile-picture">
-                                <figure><img src="img/members2.jpg" alt=""></figure>
+                                <figure><img src="~/img/Team/3.jpg" alt=""></figure>
                                 <div class="profile-overlay"></div>
                                 <div class="profile-social">
                                     <div class="icons-wrapper">
@@ -157,9 +161,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <br />
                             <div class="team-detail">
                                 <h4>Jose Manuel</h4>
-                                <span>Web designer</span>
+                                <span>Advogada</span>
                             </div>
                         </div>
                     </div>
@@ -181,7 +186,7 @@
         </div>
     </section>
     <!-- CONTATO -->
-    <section id="section-contact" class="section appear clearfix">
+    <section id="section-contact"  style="background: url(../../img/FundoLogin.png) no-repeat bottom center scroll!important">
         <div class="container">
             <div class="row mar-bot40">
                 <div class="col-md-offset-3 col-md-6">
@@ -194,33 +199,33 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <div id="sendmessage">Your message has been sent. Thank you!</div>
+                        <div id="sendmessage">Sua mensagem foi enviada. Obrigado!</div>
                         <div id="errormessage"></div>
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="txt_name" placeholder="Nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="name" class="form-control Field" id="txt_name" placeholder="Nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="txt_email" placeholder="E-mail" data-rule="email" data-msg="Please enter a valid email" />
+                            <input type="email" class="form-control Field" name="email" id="txt_email" placeholder="E-mail" data-rule="email" data-msg="Please enter a valid email" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="txt_subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <input type="text" class="form-control Field" name="subject" id="txt_subject" placeholder="Assunto" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" name="message" id="txt_message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
+                            <textarea class="form-control Field" name="message" id="txt_message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Mensagem"></textarea>
                             <div class="validation"></div>
                         </div>
-                        <div class="col-sm-12" id="DivErro"></div>
-                        <div class="text-center"><button type="button" class="line-btn green" id="bnt_Contato">Enviar</button></div>
+                        <div class="form-group" id="DivFeedbackUser"></div>
+                        <div class="text-center"><button type="button" class="ButtonSend" id="bnt_Contato">Enviar</button></div>
                         <div class="text-center" style="padding-top:50px;color:#fff;">
                             <i class="fa fa-phone IconContato" aria-hidden="true"></i><span>&nbsp;&nbsp;19-3461-1852</span><br />
                             <i class="fa fa-envelope IconContato" aria-hidden="true"></i><span>&nbsp;&nbsp;contato@lcesaradvogados.com </span><br />
                             <i class="fa fa-home IconContato" aria-hidden="true"></i><span>&nbsp;&nbsp; Riachuelo, 547 - Sta Catarina - Americana</span><br /><br />
                         </div>
                     </div>
-                    <div class="windows8" id="DivLoading" style="display:none;z-index:1;">
+                    <div class="windows8" id="DivLoading" style="z-index:1;margin-top:165px;display:none">
                         <div class="wBall" id="wBall_1">
                             <div class="wInnerBall"></div>
                         </div>
@@ -242,23 +247,8 @@
             </div>
         </div>
     </section>
-    <!-- map -->
-    <div id="map" style="height: 400px"> </div>
-    <section id="footer" class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-9 text-center">
-                    <p>L.CÉSAR Advogados Copyright ©</p>
-                </div>
-                <div class="col-xs-12 col-sm-3 text-center">
-                    <a href=""><img src="~/img/SSWEB.png"></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <a href="#header" class="scrollup"><i class="fa fa-chevron-up"></i></a>
-    <script type="text/javascript" src="~/Scripts/maps.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs0NxYNYkb5iusQV8crtGAehGc7iiX5Tk&callback=initMap" type="text/javascript"></script>
+
+    <a href="#headerTopo" class="scrollup"><i class="fa fa-chevron-up"></i></a>
     <script type="text/javascript">
         $(document).ready(function () {
             $('#slider1').tinycarousel();

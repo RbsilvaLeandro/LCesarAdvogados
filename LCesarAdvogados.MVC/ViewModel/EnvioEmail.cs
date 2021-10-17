@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Net.Mime;
@@ -10,13 +8,12 @@ using System.Web;
 
 namespace LCesarAdvogados.MVC.ViewModel
 {
-   public class EnvioEmail
+    public class EnvioEmail
     {
-        public Boolean EnvioEmailCliente(string corpo, string destinatario, string assunto, string mail)
+        public bool EnvioEmailCliente(string corpo, string destinatario, string assunto, string mail)
         {
             try
             {
-                //Define o endereço do remetente com cópia oculta
                 MailMessage Email = new MailMessage();
                 Email.From = new MailAddress(mail);
 
@@ -25,8 +22,6 @@ namespace LCesarAdvogados.MVC.ViewModel
                 Email.Subject = assunto;
                 Email.IsBodyHtml = true;
 
-                //Atenção, o suporte a CSS é limitado em vários Webmails, 
-                //utilize o CSS INLINE que é compatível com a maioria dos WEBMAILS, OUTLOOK e outros.
                 StringBuilder body = new StringBuilder();
                 body.Append("<html>");
                 body.Append("<body style=\"font-family:Arial, Helvetica, sans-serif; font-size: 14px\">");
@@ -34,7 +29,7 @@ namespace LCesarAdvogados.MVC.ViewModel
                 body.Append("<table>");
                 body.Append(corpo);
 
-                LinkedResource lr = new LinkedResource("C:\\WebSites\\LCesarAdvogados\\LCesarAdvogados\\LCesarAdvogados.MVC\\img\\FundoEmail.jpg", "images/jpg");
+                LinkedResource lr = new LinkedResource(HttpContext.Current.Server.MapPath("..\\img\\FundoEmail.jpg"), "images/jpg") ;
                 lr.ContentId = "logo";
 
                 AlternateView av = AlternateView.CreateAlternateViewFromString(body.ToString(), new ContentType("text/html"));

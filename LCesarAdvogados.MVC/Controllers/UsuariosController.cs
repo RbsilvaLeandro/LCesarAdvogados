@@ -17,31 +17,22 @@ namespace LCesarAdvogados.MVC.Controllers
         {
             _UsuarioAplicacao = UsuarioAplicacao;
         }
-
-        //
-        // GET: /Usuarios/
         public ActionResult Index()
         {
             var UsuarioViewModel = Mapper.Map<IEnumerable<Usuario>, IEnumerable<UsuarioViewModel>>(_UsuarioAplicacao.GetAll());
             return View(UsuarioViewModel);
         }
 
-        //
-        // GET: /Usuarios/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        //
-        // GET: /Usuarios/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        //
-        // POST: /Usuarios/Create
         [HttpPost]
         public ActionResult Create(UsuarioViewModel usuario)
         {
@@ -58,8 +49,6 @@ namespace LCesarAdvogados.MVC.Controllers
             }
         }
 
-        //
-        // GET: /Usuarios/Edit/5
         public ActionResult Edit(int id)
         {
             var Usuario = _UsuarioAplicacao.GetById(id);
@@ -68,8 +57,6 @@ namespace LCesarAdvogados.MVC.Controllers
             return View(UsuarioViewModel);
         }
 
-        //
-        // POST: /Usuarios/Edit/5
         [HttpPost]
         public ActionResult Edit(UsuarioViewModel Usuario)
         {
@@ -86,8 +73,6 @@ namespace LCesarAdvogados.MVC.Controllers
             return View(Usuario);
         }
 
-        //
-        // GET: /Usuarios/Delete/5
         public ActionResult Delete(int id)
         {
             var Usuario = _UsuarioAplicacao.GetById(id);
@@ -96,8 +81,6 @@ namespace LCesarAdvogados.MVC.Controllers
             return View(UsuarioViewModel);
         }
 
-        //
-        // POST: /Usuarios/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

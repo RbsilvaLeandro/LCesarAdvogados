@@ -4,9 +4,7 @@ using LCesarAdvogados.Dominio.Entidades;
 using LCesarAdvogados.MVC.ViewModel;
 using System;
 using System.Collections.Generic;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.UI;
 
 namespace LCesarAdvogados.MVC.Controllers
 {
@@ -17,7 +15,7 @@ namespace LCesarAdvogados.MVC.Controllers
         {
             _PostAplicacao = PostAplicacao;
         }
-
+        
         public ActionResult Index()
         {
             return View();
@@ -30,13 +28,11 @@ namespace LCesarAdvogados.MVC.Controllers
         [HttpPost]
         public ActionResult EnviarContato(String Nome, String Email, String Assunto, String Mensagem)
         {
-            //Enviando Email de contato
-
             RetornoFuncao obj_RETORNO = new RetornoFuncao();
 
             EnvioEmail em = new EnvioEmail();
 
-            if (em.EnvioEmailCliente(Mensagem, "peterlsouza@gmail.com", Assunto, Email))
+            if (em.EnvioEmailCliente(Mensagem, "rbsilva.leandro@gmail.com", Assunto, Email))
             {
                 obj_RETORNO.MsgError = "";
                 obj_RETORNO.MsgSucesso = "Falha ao enviar o Email";
@@ -49,6 +45,5 @@ namespace LCesarAdvogados.MVC.Controllers
             return Json(obj_RETORNO);
 
         }
-
     }
 }

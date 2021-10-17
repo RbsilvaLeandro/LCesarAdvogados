@@ -3,8 +3,6 @@ using LCesarAdvogados.Dominio.Entidades;
 using LCesarAdvogados.MVC.ViewModel;
 using AutoMapper;
 using LCesarAdvogados.Aplicacao.Interface;
-using System;
-
 
 namespace LCesarAdvogados.MVC.Controllers
 {
@@ -37,7 +35,6 @@ namespace LCesarAdvogados.MVC.Controllers
                 {
                     ModelState.AddModelError("Erro de Login", "Login ou Senha inválidos!");
                     return View("Index");
-
                 }
             }
             else
@@ -45,7 +42,6 @@ namespace LCesarAdvogados.MVC.Controllers
                 ModelState.AddModelError("Erro de Login", "Usuário não encontrado");
                 return View("Index");
             }
-
         }
        
         public ActionResult Details(int id)
@@ -58,15 +54,12 @@ namespace LCesarAdvogados.MVC.Controllers
         {
             return View();
         }
-
-       
+               
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
             try
             {
-                // TODO: Add insert logic here
-
                 return RedirectToAction("Index");
             }
             catch
@@ -74,7 +67,6 @@ namespace LCesarAdvogados.MVC.Controllers
                 return View();
             }
         }
-
         public ActionResult Edit(int id)
         {
             return View();
@@ -85,8 +77,6 @@ namespace LCesarAdvogados.MVC.Controllers
         {
             try
             {
-                // TODO: Add update logic here
-
                 return RedirectToAction("Index");
             }
             catch
@@ -105,8 +95,6 @@ namespace LCesarAdvogados.MVC.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
-
                 return RedirectToAction("Index");
             }
             catch

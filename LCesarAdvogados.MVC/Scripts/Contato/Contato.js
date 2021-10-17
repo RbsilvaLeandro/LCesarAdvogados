@@ -20,13 +20,13 @@
                 success: function (data) {
                     if (data.MsgSucesso != "") {
                         $("#DivLoading").css('display', 'none');
-                        $("#DivErro").empty();
-                        $("#DivErro").append("<p class=\"alert alert-info\">Mensagem enviada com sucesso. Nossa equipe entrará em contato em breve.</p>");
+                        $("#DivFeedbackUser").empty();
+                        $("#DivFeedbackUser").append("<p class=\"alert alert-info\">Mensagem enviada com sucesso. Nossa equipe entrará em contato em breve.</p>");
                     }
                     else {
                         $("#DivLoading").css('display', 'none');
-                        $("#DivErro").empty();
-                        $("#DivErro").append("<p class=\"alert alert-danger\">Houve uma falha ao enviar o email.</p>");
+                        $("#DivFeedbackUser").empty();
+                        $("#DivFeedbackUser").append("<p class=\"alert alert-danger\">Houve uma falha ao enviar o email.</p>");
                     }
                 },
                 error: function () {

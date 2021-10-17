@@ -1,6 +1,5 @@
 namespace LCesarAdvogados.Infra.Migrations
 {
-    using MySql.Data.Entity;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;

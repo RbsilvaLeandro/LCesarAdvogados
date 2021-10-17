@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Apresentacao", "0 - Apresentacao", "{7FA71622-C315-4E06-802E-58310CAC8488}"
 EndProject
@@ -24,6 +24,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{7CDAFB63-AB9A-437B-B444-15E1CE40DD37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCesarAdvogados.Infra", "LCesarAdvogados.Infra\LCesarAdvogados.Infra.csproj", "{38D541E9-15BC-42C6-833C-86FE1E2FAAEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Testes", "5 - Testes", "{3D5267A5-B354-4EBD-AD30-12EC233DCBBF}"
+	ProjectSection(SolutionItems) = preProject
+		LCesarAdvogados.Testes\LCesarAdvogados.Testes.csproj = LCesarAdvogados.Testes\LCesarAdvogados.Testes.csproj
+		LCesarAdvogados.Testes\UnitTest1.cs = LCesarAdvogados.Testes\UnitTest1.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +59,13 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{77157D16-15B9-4DDD-A7BE-856ABD093628} = {7FA71622-C315-4E06-802E-58310CAC8488}
-		{80ED1CFB-2FF8-4606-939E-E1754C8B0146} = {12D6563B-A677-43CD-94F9-CF34942275C8}
 		{D20DC1D8-44B6-4EAD-BA29-3F26E11E77AA} = {F47AF66C-5548-470A-8D35-500A880D1A5B}
+		{80ED1CFB-2FF8-4606-939E-E1754C8B0146} = {12D6563B-A677-43CD-94F9-CF34942275C8}
 		{E4138B84-5E0C-4274-B324-DFB9AAA03EB0} = {7F4C0D49-60D2-4153-A96E-3453BFB0B76F}
 		{7CDAFB63-AB9A-437B-B444-15E1CE40DD37} = {7F4C0D49-60D2-4153-A96E-3453BFB0B76F}
 		{38D541E9-15BC-42C6-833C-86FE1E2FAAEB} = {E4138B84-5E0C-4274-B324-DFB9AAA03EB0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1569A5B5-457E-4DC3-A6EC-5374CDC1EE74}
 	EndGlobalSection
 EndGlobal

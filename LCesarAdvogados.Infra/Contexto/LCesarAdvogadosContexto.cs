@@ -2,7 +2,6 @@
 using LCesarAdvogados.Infra.EntityConfig;
 using System;
 using System.Data.Entity;
-using System.Data.Entity.Migrations.History;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 
@@ -26,8 +25,6 @@ namespace LCesarAdvogados.Infra.Contexto
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
             modelBuilder.Properties().Where(p => p.Name == "Id" + p.ReflectedType.Name).Configure(p => p.IsKey());
-            //modelBuilder.Properties<string>().Configure(p => p.HasColumnType("varchar"));
-            //modelBuilder.Properties<string>().Configure(p => p.HasMaxLength(100));
             modelBuilder.Configurations.Add(new UsuarioConfig());
             modelBuilder.Configurations.Add(new PostConfig());
        

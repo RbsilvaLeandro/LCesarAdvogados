@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using LCesarAdvogados.Aplicacao.Interface;
 using LCesarAdvogados.Dominio.Entidades;
-using LCesarAdvogados.Dominio.Servicos;
-using LCesarAdvogados.MVC.Filtros;
 using LCesarAdvogados.MVC.ViewModel;
 using System.Collections.Generic;
 using System.IO;
@@ -13,7 +11,6 @@ using System.Web.Mvc;
 
 namespace LCesarAdvogados.MVC.Controllers
 {
-    //[AutorizacaoFilterAttribute]
     public class PostsController : Controller
     {
       
@@ -23,31 +20,22 @@ namespace LCesarAdvogados.MVC.Controllers
             _PostAplicacao = PostAplicacao;
         }
 
-        //
-        // GET: /Posts/
         public ActionResult Index()
         {
             var PostViewModel = Mapper.Map<IEnumerable<Posts>, IEnumerable<PostViewModel>>(_PostAplicacao.GetAll());
             return View(PostViewModel);
         }
 
-        //
-        // GET: /Posts/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        //
-        // GET: /Posts/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        //
-        // POST: /Posts/Create
-       
+     
         [HttpPost]
         public ActionResult Create(PostViewModel post, HttpPostedFileBase file)
         {
@@ -59,7 +47,7 @@ namespace LCesarAdvogados.MVC.Controllers
                     var fileName = Path.GetFileName(file.FileName);
                     var path = Path.Combine(Server.MapPath("~/img/Posts"), fileName);
                     file.SaveAs(path);
-                    post.ImagemPost = path.Replace("C:\\WebSites\\LCesarAdvogados\\LCesarAdvogados.MVC\\","");
+                    post.ImagemPost = "../img/Posts/" + fileName;
                 }
                 var PostDominio = Mapper.Map<PostViewModel, Posts>(post);
                 _PostAplicacao.Add(PostDominio);
@@ -70,9 +58,6 @@ namespace LCesarAdvogados.MVC.Controllers
                 return View();
             }
         }
-
-        //
-        // GET: /Posts/Edit/5
         public ActionResult Edit(int id)
         {
             var Post = _PostAplicacao.GetById(id);
@@ -81,8 +66,6 @@ namespace LCesarAdvogados.MVC.Controllers
             return View(PostsViewModel);
         }
 
-        //
-        // POST: /Posts/Edit/5
         [HttpPost]
         public ActionResult Edit(PostViewModel Post)
         {
@@ -99,8 +82,6 @@ namespace LCesarAdvogados.MVC.Controllers
             return View(Post);
         }
 
-        //
-        // GET: /Posts/Delete/5
         public ActionResult Delete(int id)
         {
             var Posts = _PostAplicacao.GetById(id);
@@ -109,8 +90,6 @@ namespace LCesarAdvogados.MVC.Controllers
             return View(PostViewModel);
         }
 
-        //
-        // POST: /Posts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id, FormCollection collection)
