@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31515.178
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31808.319
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Apresentacao", "0 - Apresentacao", "{7FA71622-C315-4E06-802E-58310CAC8488}"
 EndProject
@@ -24,12 +24,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{7CDAFB63-AB9A-437B-B444-15E1CE40DD37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LCesarAdvogados.Infra", "LCesarAdvogados.Infra\LCesarAdvogados.Infra.csproj", "{38D541E9-15BC-42C6-833C-86FE1E2FAAEB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Testes", "5 - Testes", "{3D5267A5-B354-4EBD-AD30-12EC233DCBBF}"
-	ProjectSection(SolutionItems) = preProject
-		LCesarAdvogados.Testes\LCesarAdvogados.Testes.csproj = LCesarAdvogados.Testes\LCesarAdvogados.Testes.csproj
-		LCesarAdvogados.Testes\UnitTest1.cs = LCesarAdvogados.Testes\UnitTest1.cs
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

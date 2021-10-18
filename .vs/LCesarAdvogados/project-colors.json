@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "82f67e25-03c4-4f41-b26b-9072fbd82811": {
+      "ProjectGuid": "82f67e25-03c4-4f41-b26b-9072fbd82811",
+      "DisplayName": "LCesarAdvogados.Tests",
+      "ColorIndex": 0
+    },
+    "77157d16-15b9-4ddd-a7be-856abd093628": {
+      "ProjectGuid": "77157d16-15b9-4ddd-a7be-856abd093628",
+      "DisplayName": "LCesarAdvogados.MVC",
+      "ColorIndex": 1
+    },
+    "5acb0780-f3cd-46b6-9241-d4ce1191f514": {
+      "ProjectGuid": "5acb0780-f3cd-46b6-9241-d4ce1191f514",
+      "DisplayName": "LCesarAdvogados.MVCTests",
+      "ColorIndex": 2
+    },
+    "d20dc1d8-44b6-4ead-ba29-3f26e11e77aa": {
+      "ProjectGuid": "d20dc1d8-44b6-4ead-ba29-3f26e11e77aa",
+      "DisplayName": "LCesarAdvogados.Dominio",
+      "ColorIndex": 3
+    },
+    "38d541e9-15bc-42c6-833c-86fe1e2faaeb": {
+      "ProjectGuid": "38d541e9-15bc-42c6-833c-86fe1e2faaeb",
+      "DisplayName": "LCesarAdvogados.Infra",
+      "ColorIndex": 4
+    },
+    "80ed1cfb-2ff8-4606-939e-e1754c8b0146": {
+      "ProjectGuid": "80ed1cfb-2ff8-4606-939e-e1754c8b0146",
+      "DisplayName": "LCesarAdvogados.Aplicacao",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}
